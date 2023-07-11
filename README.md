@@ -22,3 +22,4 @@
   #### SMB Exploit
       * smbclient //[IP]/[SHARE]
       * smbclient //10.10.10.2/sharefilename -U username -p 445
+ ### Telnet
