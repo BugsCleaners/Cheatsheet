@@ -16,7 +16,7 @@
 ## Services  
  ### SMB
    #### Enumerating SMB
-      * ```enum4linux [options] ip```
+      * enum4linux [options] ip
       * use option  ```-a``` all of the above (full basic enumeration)
 
   #### SMB Exploit
