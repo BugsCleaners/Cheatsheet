@@ -7,6 +7,12 @@
 * [-h / -help / --help] or man
 * https://www.exploit-db.com/exploits/20745
 
+### Commands 
+* SSH with key `ssh -i <key-file> <username>@<ip>`
+* SSH with Password `ssh username@IP`
+* list all permissions `ls -la fielname`
+* 
+
 
 ## Useful location  
   ### .ssh Key 
