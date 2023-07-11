@@ -15,8 +15,10 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 * SSH with key `ssh -i <key-file> <username>@<ip>`
 * SSH with Password `ssh username@IP`
 * list all permissions `ls -la fielname`
-* 
-
+* Copy file `cp /temp/test /temp/folder/`
+* Copy Directory `cp -r  /temp/test /temp/folder/`
+* move file `mv /temp/test /temp/test2 `
+* text `nano`, `vim`, `vi`
 
 ## Useful location  
   ### .ssh Key 
@@ -28,6 +30,10 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
    * /usr/share/wordlists/SecLists/Usernames
    *  if not found install it `sudo apt install seclists`
    *  /usr/share/wordlists/rockyou.txt 
+ ### Password 
+  * listing users `/etc/passwd`
+  * listing passowrd `/etc/shadow` 
+  
   ### Nmap
 
 
