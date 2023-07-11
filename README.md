@@ -6,8 +6,6 @@
 * words `sudo apt install seclists`
 
 
-
-
 ### Commands 
 * help  [-h / -help / --help] or man
 * ```systemctl stop myservice```
@@ -24,7 +22,6 @@
 * `echo $PATH`
 
 
-
 ## Useful location  
   ### .ssh Key 
    * Private key ssh ```/home/user-name/.ssh```
@@ -32,15 +29,19 @@
    * change the file permission ``` chmod 600 ```
    * `ssh -i <key-file> <username>@<ip> `
   ### Wordlists 
+   * Directory https://github.com/digination/dirbuster-ng/blob/master/wordlists/common.txt
+   * /usr/share/wordlists/dirbuster
    * /usr/share/wordlists/SecLists/Usernames
    *  if not found install it `sudo apt install seclists`
-   *  /usr/share/wordlists/rockyou.txt 
+   *  /usr/share/wordlists/rockyou.txt
+   *   
  ### Password 
   * listing users `/etc/passwd`
   * listing passowrd `/etc/shadow` 
   
 ### Nmap
 * ` nmap -sU --top-ports 20 10.1.1.1` 
+
 
 # Fast Tool 
 ## Netcat
@@ -65,6 +66,8 @@
 * run web server `python3 -m http.server 8090`
 * using this to download `wget http://127.0.0.1:8000/file`
 
+## gobuster:
+*  `dir -u http://example.com/ -w common.txt`
 
 # Services  
 
