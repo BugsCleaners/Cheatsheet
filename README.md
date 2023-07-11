@@ -1,10 +1,7 @@
 # Cheatsheet
 
 ### Common 
-* ```wget http://127.0.0.1:8000/file```
-* ```python3 -m http.server```
-* ```systemctl stop myservice```
-* [-h / -help / --help] or man
+
 * https://www.exploit-db.com/exploits/20745
 * words `sudo apt install seclists`
 https://github.com/security-cheatsheet/metasploit-cheat-sheet 
@@ -12,13 +9,19 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 
 
 ### Commands 
+* help  [-h / -help / --help] or man
+* ```systemctl stop myservice```
 * SSH with key `ssh -i <key-file> <username>@<ip>`
 * SSH with Password `ssh username@IP`
 * list all permissions `ls -la fielname`
 * Copy file `cp /temp/test /temp/folder/`
 * Copy Directory `cp -r  /temp/test /temp/folder/`
 * move file `mv /temp/test /temp/test2 `
+* copy fileusing SSH `scp file.txt remote_username@10.10.0.2:/remote/directory`
+* copy directory using SSH `scp -r /root/directory remote_username@10.10.0.2:/remote/directory`
 * text `nano`, `vim`, `vi`
+
+
 
 ## Useful location  
   ### .ssh Key 
@@ -48,7 +51,15 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 
 
 
+## Webserver 
+### Python code 
+* run web server `python3 -m http.server`
+* run web server `python3 -m http.server 8090`
+* using this to download `wget http://127.0.0.1:8000/file`
+
+
 # Services  
+
 ## SMB
 ### Enumerating SMB
 * enum4linux [options] ip
