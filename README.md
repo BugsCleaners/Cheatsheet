@@ -33,6 +33,7 @@ https://github.com/security-cheatsheet/metasploit-cheat-sheet
 
 # Fast Tool 
 ## Netcat
+* nc 192.168.1.1 8080
 * nc -lvp [listening port], `nc -lvp 4444`
 
 ## Hydra 
