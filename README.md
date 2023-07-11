@@ -4,7 +4,9 @@
 * ```wget http://127.0.0.1:8000/file```
 * ```python3 -m http.server```
 * ```systemctl stop myservice```
-
+* [-h / -help / --help] or man
+* https://www.exploit-db.com/exploits/20745
+* 
 ## Useful location  
   ### .ssh Key 
    * Private key ssh ```/home/user-name/.ssh```
@@ -18,6 +20,11 @@
 ## Netcat
 * nc -lvp [listening port], `nc -lvp 4444`
 
+## Hydra 
+* used to brute force Telnet, RDP, SSH, FTP, HTTP, HTTPS, SMB
+* hydra -t 4 -l username -P /usr/share/wordlists/rockyou.txt -vV 10.10.10.6 ftp
+
+
 
 # Services  
 ## SMB
@@ -28,11 +35,23 @@
 ### SMB Exploit
 * smbclient //[IP]/[SHARE]
 * smbclient //10.10.10.2/sharefilename -U username -p 445
+
 ## Telnet
 ### Enumerating Telnet
 * nmap
 ### Exploiting
 * telnet [ip] [port]
+
+## FTP 
+### channels 
+* a command (sometimes called the control) channel
+* a data channel.
+### Enumerating FTP
+* nmap
+
+### Exploiting
+
+* "ftp [IP]" into the console, and entering "anonymous", and no password when prompted.
 
 
 # shells 
