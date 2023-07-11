@@ -17,8 +17,8 @@
  ### SMB
    #### Enumerating SMB
     * ```enum4linux [options] ip```
-    * -a all of the above (full basic enumeration)
+    * use option  ```-a``` all of the above (full basic enumeration)
 
     #### SMB Exploit
-    * smbclient //[IP]/[SHARE]
-    * smbclient //10.10.10.2/sharefilename -U username -p 445
+    * ```smbclient //[IP]/[SHARE]```
+    * ```smbclient //10.10.10.2/sharefilename -U username -p 445```
