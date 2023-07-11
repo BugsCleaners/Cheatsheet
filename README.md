@@ -57,7 +57,7 @@
 * by defualt mount,showmount, nfsstat, gssd, idmapd, lockd, statd,
 ### Enumeration
 * nmap
-* show all shares '/usr/sbin/showmount -e [IP]' 
+* show all shares `/usr/sbin/showmount -e [IP] `
 ### Exploiting
 * create folder `mkdir /tmp/mount`
 * 'sudo mount -t nfs IP:share /tmp/mount/ -nolock'
