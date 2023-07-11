@@ -13,6 +13,12 @@
 
   ### Nmap
 
+
+# Fast Tool 
+## Netcat
+* nc -lvp [listening port], `nc -lvp 4444`
+
+
 # Services  
 ## SMB
 ### Enumerating SMB
@@ -22,4 +28,15 @@
 ### SMB Exploit
 * smbclient //[IP]/[SHARE]
 * smbclient //10.10.10.2/sharefilename -U username -p 445
-### Telnet
+## Telnet
+### Enumerating Telnet
+* nmap
+### Exploiting
+* telnet [ip] [port]
+
+# other Important 
+## Start a tcpdump listener
+If using your own machine with the OpenVPN connection, use:
+sudo tcpdump ip proto \\icmp -i tun0
+If using the AttackBox, use:
+sudo tcpdump ip proto \\icmp -i ens5
