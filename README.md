@@ -20,6 +20,8 @@
 * copy fileusing SSH `scp file.txt remote_username@10.10.0.2:/remote/directory`
 * copy directory using SSH `scp -r /root/directory remote_username@10.10.0.2:/remote/directory`
 * text `nano`, `vim`, `vi`
+* `export PATH=/tmp:$PATH`
+* `echo $PATH`
 
 
 
