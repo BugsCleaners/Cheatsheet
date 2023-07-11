@@ -86,8 +86,8 @@ R = export the payload in raw format
 * change to excute `chmod +x filename`
 * change ower to root `chown root fielname`
 * validate (sr-x) permssion `ls -la fielname`
+* move the file to target (SSH/ NFS/ FTP )
 * run the file with `./fielname -p` on target 
-
 # other Important 
 ## Start a tcpdump listener
 
